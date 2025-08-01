@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.well-known/
+Disallow: /private/
+
+# Security - Block common attack vectors
+Disallow: /.env
+Disallow: /.git/
+Disallow: /wp-admin/
+Disallow: /admin/
+Disallow: /administrator/
+Disallow: /phpmyadmin/
+
+Sitemap: https://aerotrofix.com/sitemap.xml

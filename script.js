@@ -100,23 +100,41 @@ if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Get form data
-        const formData = new FormData(this);
-        const name = this.querySelector('input[placeholder="Your Name"]').value;
-        const email = this.querySelector('input[placeholder="Your Email"]').value;
-        const subject = this.querySelector('input[placeholder="Subject"]').value;
-        const message = this.querySelector('textarea').value;
+        // Enhanced input sanitization and validation
+        const name = this.querySelector('input[placeholder="Your Name"]').value.trim();
+        const email = this.querySelector('input[placeholder="Your Email"]').value.trim();
+        const subject = this.querySelector('input[placeholder="Subject"]').value.trim();
+        const message = this.querySelector('textarea').value.trim();
         
-        // Basic validation
-        if (!name || !email || !subject || !message) {
+        // Sanitize inputs (remove potential script tags and dangerous characters)
+        function sanitizeInput(input) {
+            return input.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+                       .replace(/[<>'"]/g, '')
+                       .substring(0, 1000); // Limit length
+        }
+        
+        const sanitizedName = sanitizeInput(name);
+        const sanitizedSubject = sanitizeInput(subject);
+        const sanitizedMessage = sanitizeInput(message);
+        
+        // Enhanced validation
+        if (!sanitizedName || !email || !sanitizedSubject || !sanitizedMessage) {
             alert('Please fill in all fields.');
             return;
         }
         
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // Stricter email validation
+        const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
         if (!emailRegex.test(email)) {
             alert('Please enter a valid email address.');
+            return;
+        }
+        
+        // Rate limiting check
+        const lastSubmission = localStorage.getItem('lastFormSubmission');
+        const now = Date.now();
+        if (lastSubmission && (now - parseInt(lastSubmission)) < 60000) { // 1 minute cooldown
+            alert('Please wait before submitting another message.');
             return;
         }
         
@@ -128,6 +146,8 @@ if (contactForm) {
         
         // Simulate API call
         setTimeout(() => {
+            // Store submission timestamp for rate limiting
+            localStorage.setItem('lastFormSubmission', now.toString());
             alert('Thank you for your message! We will get back to you soon.');
             this.reset();
             submitBtn.textContent = originalText;
