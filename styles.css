@@ -496,6 +496,80 @@ h1, h2, h3, h4, h5, h6,
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Compliance & Standards Section */
+.compliance-standards {
+    padding: 100px 0;
+    background-color: #f8fafc;
+}
+
+.compliance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.compliance-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.compliance-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--warm-gold);
+}
+
+.compliance-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    margin: 0 auto 25px;
+}
+
+.compliance-title {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.compliance-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.compliance-summary {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.compliance-summary p {
+    font-size: 1.125rem;
+    color: var(--primary-blue);
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0;
+}
+
 /* Why Aerotrofix Section */
 .why-aerotrofix {
     padding: 100px 0;
@@ -873,6 +947,7 @@ h1, h2, h3, h4, h5, h6,
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 20px 0;
         gap: 0;
+        z-index: 1000;
     }
 
     .nav-menu.active {
@@ -887,10 +962,16 @@ h1, h2, h3, h4, h5, h6,
         grid-template-columns: 1fr;
         text-align: center;
         gap: 40px;
+        padding: 20px 0;
+    }
+
+    .hero-visual {
+        height: 300px;
     }
 
     .hero-title {
         font-size: 2.5rem;
+        line-height: 1.2;
     }
 
     .hero-subtitle {
@@ -899,6 +980,12 @@ h1, h2, h3, h4, h5, h6,
 
     .section-title {
         font-size: 2rem;
+        text-align: center;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        text-align: center;
     }
 
     .about-text {
@@ -907,6 +994,30 @@ h1, h2, h3, h4, h5, h6,
 
     .solutions-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .solution-card {
+        margin: 0 10px;
+    }
+
+    .compliance-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .compliance-card {
+        padding: 30px 20px;
+        margin: 0 10px;
+    }
+
+    .compliance-title {
+        font-size: 1.25rem;
+    }
+
+    .compliance-summary {
+        padding: 20px;
+        margin: 30px 10px 0;
     }
 
     .experience-grid {
@@ -937,6 +1048,18 @@ h1, h2, h3, h4, h5, h6,
 
     .hero-buttons {
         justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    /* Mobile section padding */
+    .hero, .about, .solutions, .compliance-standards, .why-aerotrofix, .contact {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 15px;
     }
 }
 
@@ -956,6 +1079,30 @@ h1, h2, h3, h4, h5, h6,
 
     .solution-card {
         padding: 30px 20px;
+    }
+
+    .compliance-card {
+        padding: 25px 15px;
+    }
+
+    .compliance-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .compliance-title {
+        font-size: 1.125rem;
+        line-height: 1.4;
+    }
+
+    .compliance-summary {
+        padding: 15px;
+    }
+
+    .compliance-summary p {
+        font-size: 1rem;
     }
 
     .experience-card {
