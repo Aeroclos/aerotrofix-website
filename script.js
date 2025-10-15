@@ -7,6 +7,8 @@ const ready = (fn) => {
 };
 
 ready(() => {
+    document.documentElement.classList.add('supports-animate');
+
     const nav = document.querySelector('.nav');
     const navToggle = document.querySelector('.nav__toggle');
     const navMenu = document.querySelector('.nav__menu');
