@@ -1,113 +1,75 @@
-# Aerotrofix LLC - Company Landing Page
+# Aerotrofix Website
 
-A modern, professional landing page for Aerotrofix LLC, showcasing aviation technology solutions with elegance and trust.
+A cinematic, responsive marketing site for Aerotrofix LLC that now forwards demo requests straight to the team inbox. The project combines a handcrafted front-end with a minimal Node.js mail relay so submissions land in `aerotrofixllc@gmail.com` automatically.
 
-## Features
+## ✨ Highlights
 
-- **Responsive Design** - Works perfectly on desktop, tablet, and mobile devices
-- **Modern UI/UX** - Clean, professional design with smooth animations
-- **Interactive Elements** - Hover effects, smooth scrolling, and form validation
-- **SEO Optimized** - Proper semantic HTML structure
-- **Fast Loading** - Optimized images and efficient code
-- **Contact Form** - Functional contact form with validation
-- **Social Media Integration** - Ready for social media links
+- Gradient-rich hero, narrative sections, and animated cards tailored for aviation decision makers
+- Mobile-first navigation with sticky state and Intersection Observer animations
+- JSON API at `/api/demo-request` that emails form submissions in the background
+- Environment-driven configuration—no credentials committed to source control
+- Single Node.js process that serves both the static site and the API
 
-## Project Structure
+## 🧰 Stack
 
+| Layer     | Technology                    | Notes |
+|-----------|-------------------------------|-------|
+| Front end | HTML5, CSS custom framework, Vanilla JS | No build tooling required |
+| Back end  | Node.js 18+, Express 4, Nodemailer 6     | Handles submission relay |
+| Tooling   | dotenv, cors, nodemon (dev)             | Local DX and security |
+
+## 🚀 Getting Started
+
+### 1. Requirements
+
+- Node.js **18 or newer**
+- npm (bundled with Node)
+- Gmail account with [App Passwords](https://support.google.com/accounts/answer/185833) enabled (required for SMTP access)
+
+### 2. Configure environment variables
+
+1. Duplicate `.env.example` and rename to `.env`.
+2. Fill in the values:
+   - `PORT` – optional, defaults to `4000`.
+   - `CORS_ORIGIN` – allowed origins (comma separated). `http://localhost:4000` works for local dev.
+   - `GMAIL_USER` – Gmail address used to authenticate, e.g. `aerotrofixllc@gmail.com`.
+   - `GMAIL_PASS` – Gmail **App Password** (16 character code). Regular passwords will be rejected by Google.
+   - `DESTINATION_EMAIL` – where submissions should be delivered. Defaults to `GMAIL_USER` if omitted.
+
+> `.gitignore` already excludes `.env`, so secrets stay out of version control.
+
+### 3. Install and run
+
+```powershell
+cd E:\WEBSiteAerotrofix\aerotrofix-website
+npm install
+npm run start
 ```
-Aerotrofix/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styling
-├── script.js           # JavaScript functionality
-├── README.md           # Project documentation
-└── [Logo Images]       # Company logo assets
-```
 
-## Technologies Used
+The site becomes available at `http://localhost:4000/` with the API mounted at the same origin (`/api/demo-request`). For hot reload while developing the server use `npm run dev`.
 
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with Flexbox and Grid
-- **JavaScript (ES6+)** - Interactive functionality
-- **Font Awesome** - Icons
-- **Google Fonts** - Typography (Inter font family)
+## 📬 How the form works
 
-## Setup Instructions
+1. The form in `index.html` posts JSON to `/api/demo-request`.
+2. `server.js` validates required fields and formats an HTML email.
+3. Nodemailer sends the message using the Gmail credentials from your `.env` file.
+4. The requester’s email is set as the `reply-to`, so you can respond directly.
+5. Success or failure is surfaced inline via the status banner beneath the submit button.
 
-1. **Local Development:**
-   - Open `index.html` in your web browser
-   - Or use a local server like Live Server extension in VS Code
+> Planning a production deployment? Swap Gmail for a dedicated provider (SendGrid, SES, Mailgun) and store secrets in managed vaults.
 
-2. **Web Server Deployment:**
-   - Upload all files to your web server
-   - Ensure all image paths are correct
-   - Test on different devices and browsers
+## 🛠 Customisation
 
-## Customization Guide
+- **Content & storytelling:** edit copy inside `index.html`.
+- **Branding:** adjust CSS tokens inside the `:root` block of `styles.css`.
+- **Hero imagery:** replace the background URL in `.hero` with an approved creative.
+- **API endpoint:** change `data-endpoint` on the `<form>` element if you host the mailer elsewhere.
+- **Email template:** tweak the HTML markup inside `server.js` to match desired formatting.
 
-### Company Information
-- Update contact details in the Contact section
-- Modify company description and services
-- Replace logo images with your actual logos
+## 📦 Deployment
 
-### Styling
-- Colors can be changed in `styles.css`
-- Primary gradient: `#667eea` to `#764ba2`
-- Accent color: `#f6d55c` (yellow)
-- Update fonts by changing the Google Fonts import
+Deploy the entire `aerotrofix-website` directory to any Node-friendly platform (Azure App Service, Render, Heroku, Fly.io, etc.). Ensure outbound SMTP is allowed and replicate your `.env` values via the platform’s secret manager.
 
-### Content Sections
-1. **Hero Section** - Main banner with company introduction
-2. **About Section** - Company values and expertise
-3. **Services Section** - Detailed service offerings
-4. **Stats Section** - Company achievements and numbers
-5. **Contact Section** - Contact information and form
-6. **Footer** - Additional links and company info
+## 🤝 Support
 
-### Logo Integration
-The page is designed to work with your existing logo files:
-- `Logo Design for Aerotrofix with Yellow Accents.png`
-- `Aviation Technology Company Logo - Elegance and Trust.png`
-
-Make sure these files are in the same directory as your HTML file.
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Internet Explorer 11+
-
-## Performance Features
-
-- Optimized images and assets
-- Efficient CSS and JavaScript
-- Smooth animations with hardware acceleration
-- Lazy loading for images
-- Throttled scroll events for better performance
-
-## Contact Form
-
-The contact form includes:
-- Client-side validation
-- Email format validation
-- Required field checking
-- User feedback messages
-
-**Note:** For full functionality, connect the form to a backend service or email handling system.
-
-## Future Enhancements
-
-- Add a blog section
-- Implement a content management system
-- Add more interactive elements
-- Include customer testimonials
-- Add a portfolio/case studies section
-
-## Support
-
-For any questions or modifications needed, please refer to the code comments or contact the development team.
-
----
-
-**Aerotrofix LLC** - Leading Aviation Technology Solutions
+Need a hand or want to extend the workflow? Reach out to the Aerotrofix digital team—or submit the live form once the server is running and we’ll follow up.

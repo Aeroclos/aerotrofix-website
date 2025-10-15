@@ -1,309 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aerotrofix LLC - Aviation Technology Solutions</title>
-    
-    <!-- Security Headers -->
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self';">
-    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-    <link rel="stylesheet" href="styles.css">
-    <!-- Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aerotrofix | Aviation technology that makes things happen</title>
+    <meta name="description" content="Aerotrofix blends three decades of aviation expertise with modern software to orchestrate closures, records, and reliability." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <img src="Aviation Technology Company Logo - Elegance and Trust.png" alt="Aerotrofix Logo" class="logo">
-                <span class="company-name">Aerotrofix</span>
+    <header class="hero" id="home">
+        <nav class="nav">
+            <div class="nav__brand">
+                <img src="newlogo.PNG" alt="Aerotrofix logo" class="nav__logo" />
+                <span class="nav__name">Aerotrofix</span>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">Who We Are</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#solutions" class="nav-link">Solutions</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#demo" class="nav-link">Demo</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Toggle menu</span>
+            </button>
+            <div class="nav__menu" id="primary-navigation">
+                <a href="#home">Home</a>
+                <a href="#solutions">Solutions</a>
+                <a href="#outcomes">Outcomes</a>
+                <a href="#insights">Insights</a>
+                <a href="#contact">Contact</a>
+                <a class="nav__cta" href="#demo">Request demo</a>
             </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Aerotrofix</h1>
-                <p class="hero-subtitle">Aviation Expertise Meets IT Innovation</p>
-                <div class="hero-description">
-                    <p>With 30+ years of aviation operations expertise and 25+ years of IT development experience, Aerotrofix delivers solutions that streamline coordination, improve reliability, and modernize record‑keeping for airports, airlines, contractors, and inspectors.</p>
-                </div>
-                <div class="hero-buttons">
-                    <a href="#aeroclosure" class="btn btn-primary">Explore Aeroclosure</a>
-                    <a href="#aerofile" class="btn btn-primary">Explore Aerofile</a>
-                    <a href="#demo" class="btn btn-secondary">Request a Demo</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="hero-visual">
-                </div>
+        </nav>
+        <div class="hero__overlay"></div>
+        <div class="hero__inner" data-animate>
+            <span class="hero__eyebrow">Aviation / Digital</span>
+            <h1>Make things happen.</h1>
+            <p>
+                We orchestrate the people, processes, and data behind critical airport operations—turning complex
+                closure planning, compliance, and records into a single fluid rhythm.
+            </p>
+            <div class="hero__actions">
+                <a class="btn btn--primary" href="#solutions">See what we build</a>
+                <a class="btn btn--ghost" href="#contact">Talk to our team</a>
             </div>
         </div>
-    </section>
+        <button class="hero__scroll" type="button" aria-label="Scroll to content">
+            <span></span>
+        </button>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Us</h2>
-                <p class="section-subtitle">With 30+ years of aviation operations expertise and 25+ years of IT development experience, Aerotrofix delivers solutions that streamline coordination, improve reliability, and modernize record‑keeping for airports, airlines, contractors, and inspectors.</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="about-item">
-                        <div class="about-icon">
-                            <i class="fas fa-users-cog"></i>
-                        </div>
-                        <div class="about-info">
-                            <h3>Experience That Counts</h3>
-                            <p>Aviation + IT expertise under one roof, bringing deep industry knowledge to every solution.</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="about-icon">
-                            <i class="fas fa-tachometer-alt"></i>
-                        </div>
-                        <div class="about-info">
-                            <h3>Efficiency & Transparency</h3>
-                            <p>Reduce delays and improve coordination with streamlined workflows and clear visibility.</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="about-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <div class="about-info">
-                            <h3>Future‑Ready Solutions</h3>
-                            <p>Scalable, adaptable, and secure technology that grows with your organization.</p>
-                        </div>
-                    </div>
+    <main>
+        <section class="section section--light" id="solutions">
+            <div class="container">
+                <div class="section__header" data-animate>
+                    <span class="section__eyebrow">The platform</span>
+                    <h2>Two precision-built systems for keeping runway operations in motion.</h2>
+                    <p>
+                        Aerotrofix products give inspectors, operators, and contractors a shared source of truth—so every
+                        closure, inspection, and follow-up happens without friction.
+                    </p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Solutions Section -->
-    <section id="solutions" class="solutions">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Solutions</h2>
-                <p class="section-subtitle">Smart aviation technology that streamlines operations and modernizes workflows</p>
-            </div>
-            <div class="solutions-grid">
-                <div id="aeroclosure" class="solution-card">
-                    <div class="solution-header">
-                        <div class="solution-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h3 class="solution-title">🚧 Aeroclosure</h3>
-                        <p class="solution-tagline">Smart Closure Coordination Made Simple</p>
-                    </div>
-                    <div class="solution-features">
-                        <ul class="feature-list">
-                            <li><i class="fas fa-check"></i> <strong>Minimize Errors</strong> - guided, automated workflows</li>
-                            <li><i class="fas fa-check"></i> <strong>Always Online</strong> - instant access, anywhere</li>
-                            <li><i class="fas fa-check"></i> <strong>Built-In Logic Engine</strong> - consistent, compliant submissions</li>
-                            <li><i class="fas fa-check"></i> <strong>One-Click Reminders</strong> - keep stakeholders on track</li>
-                            <li><i class="fas fa-check"></i> <strong>Clear Dashboards</strong> - full visibility from request to approval</li>
+                <div class="grid grid--cards">
+                    <article class="card" data-animate>
+                        <div class="card__badge">Aeroclosure</div>
+                        <h3>Orchestrate runway closures without losing sleep.</h3>
+                        <p>
+                            Guided workflows, approval logic, and automated reminders keep every stakeholder aligned from
+                            request to reopen.
+                        </p>
+                        <ul class="card__list">
+                            <li>Dynamic templates tuned to FAA/ICAO best-practices</li>
+                            <li>Timeline visualizations for night, weekend, and expedited work</li>
+                            <li>Single-click briefings and audit-friendly exports</li>
                         </ul>
-                    </div>
-                    <a href="#demo" class="btn btn-outline">Learn More</a>
-                </div>
-                
-                <div id="aerofile" class="solution-card">
-                    <div class="solution-header">
-                        <div class="solution-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3 class="solution-title">📂 Aerofile</h3>
-                        <p class="solution-tagline">Your Digital Aviation Record Vault</p>
-                    </div>
-                    <div class="solution-features">
-                        <ul class="feature-list">
-                            <li><i class="fas fa-check"></i> <strong>Reliable Record Keeping</strong> - secure, role-based access</li>
-                            <li><i class="fas fa-check"></i> <strong>Searchable Archives</strong> - quick retrieval of past records</li>
-                            <li><i class="fas fa-check"></i> <strong>Seamless Integration</strong> - works with operational workflows</li>
-                            <li><i class="fas fa-check"></i> <strong>Audit-Ready Storage</strong> - compliance confidence built-in</li>
-                            <li><i class="fas fa-check"></i> <strong>Encrypted Cloud Security</strong> - protects your data long-term</li>
+                        <a class="card__link" href="#demo">Plan a run-through →</a>
+                    </article>
+                    <article class="card" data-animate>
+                        <div class="card__badge card__badge--alt">Aerofile</div>
+                        <h3>Archive like regulators will ask for it tomorrow.</h3>
+                        <p>
+                            Seal inspection photos, field notes, and certifications in a secure, searchable vault built for
+                            long-term retention.
+                        </p>
+                        <ul class="card__list">
+                            <li>Role-driven permissions with immutable history</li>
+                            <li>Smart tagging for contractors, equipment, and assets</li>
+                            <li>Instant evidence packs for audits and incident reviews</li>
                         </ul>
-                    </div>
-                    <a href="#demo" class="btn btn-outline">Learn More</a>
+                        <a class="card__link" href="#demo">Schedule a walkthrough →</a>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Compliance & Standards Section -->
-    <section class="compliance-standards">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Compliance & Standards</h2>
-                <p class="section-subtitle">Aerotrofix solutions are designed to support industry standards and regulatory best practices. While we do not replace formal regulatory processes, our platforms are built to help you stay aligned and ready:</p>
-            </div>
-            <div class="compliance-grid">
-                <div class="compliance-card">
-                    <div class="compliance-icon">
-                        <i class="fas fa-flag-usa"></i>
-                    </div>
-                    <h3 class="compliance-title">FAA (Federal Aviation Administration)</h3>
-                    <p class="compliance-description">Our workflows are structured to support FAA-aligned airport operations, helping ensure closure coordination and record-keeping meet federal aviation expectations.</p>
+    <section class="section section--dark" id="outcomes">
+            <div class="container grid grid--split">
+                <div class="section__header" data-animate>
+                    <span class="section__eyebrow">Why Aerotrofix</span>
+                    <h2>Operational gaps closed before crews feel them.</h2>
+                    <p>
+                        We orchestrate closure, inspection, and records workflows that remove friction, surface issues
+                        before they escalate, and keep every team in sync from briefing to reopen.
+                    </p>
                 </div>
-                <div class="compliance-card">
-                    <div class="compliance-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3 class="compliance-title">ICAO (International Civil Aviation Organization)</h3>
-                    <p class="compliance-description">Aerotrofix incorporates processes informed by ICAO Annex 14, promoting international best practices for safe and efficient airport operations.</p>
-                </div>
-                <div class="compliance-card">
-                    <div class="compliance-icon">
-                        <i class="fas fa-hard-hat"></i>
-                    </div>
-                    <h3 class="compliance-title">OSHA (Occupational Safety and Health Administration)</h3>
-                    <p class="compliance-description">By reducing errors and maintaining reliable documentation, our tools support OSHA safety practices for contractors, inspectors, and airport operations teams working on active airfields.</p>
+                <div class="benefits" data-animate>
+                    <article class="benefits__item">
+                        <h3 class="benefits__title">Time back to the runway</h3>
+                        <p class="benefits__text">Automation compresses planning cycles, so crews brief faster and get
+                            airfields reopen without delay.</p>
+                    </article>
+                    <article class="benefits__item">
+                        <h3 class="benefits__title">Built-in guardrails</h3>
+                        <p class="benefits__text">Validation logic spots conflicts, missing approvals, and schedule
+                            clashes before they hit operations.</p>
+                    </article>
+                    <article class="benefits__item">
+                        <h3 class="benefits__title">Performance clarity</h3>
+                        <p class="benefits__text">Live dashboards track every task, letting teams reprioritize the
+                            moment something drifts off plan.</p>
+                    </article>
+                    <article class="benefits__item">
+                        <h3 class="benefits__title">Communication synced</h3>
+                        <p class="benefits__text">Shared updates and targeted alerts keep stakeholders aligned—no more
+                            juggling texts, calls, and spreadsheets.</p>
+                    </article>
                 </div>
             </div>
-            <div class="compliance-summary">
-                <p>Together, these alignments ensure that Aeroclosure and Aerofile not only streamline operations but also strengthen compliance, safety, and accountability across your organization.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Why Aerotrofix Section -->
-    <section class="why-aerotrofix">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Experience That Counts</h2>
-                <p class="section-subtitle">We identify gaps and close them with tailored aviation technology</p>
-            </div>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <div class="experience-icon">
-                        <i class="fas fa-plane"></i>
-                    </div>
-                    <div class="experience-content">
-                        <h3 class="experience-title">Aviation Expertise</h3>
-                        <div class="experience-years">30 Years</div>
-                        <p class="experience-description">Hands-on experience in airports, airlines, and aviation inspections gives us unmatched industry insight.</p>
-                    </div>
+        <section class="section section--light" id="insights">
+            <div class="container">
+                <div class="section__header" data-animate>
+                    <span class="section__eyebrow">Operational insights</span>
+                    <h2>Proven playbooks for modern airports and airlines.</h2>
                 </div>
-                <div class="experience-card">
-                    <div class="experience-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="experience-content">
-                        <h3 class="experience-title">IT Solutions</h3>
-                        <div class="experience-years">25 Years</div>
-                        <p class="experience-description">Proven track record delivering secure, scalable platforms that meet the demanding needs of aviation.</p>
-                    </div>
+                <div class="grid grid--insights">
+                    <article class="insight" data-animate>
+                        <h3>Night closures we turned around 43% faster.</h3>
+                        <p>
+                            A midsize hub digitized its NOTAM process. Aeroclosure stacked approvals, triggered reminders,
+                            and delivered closure packets before the work crews rolled out.
+                        </p>
+                        <a class="card__link" href="#demo">View the sequence →</a>
+                    </article>
+                    <article class="insight insight--accent" data-animate>
+                        <h3>Every record, every time—without chasing paper.</h3>
+                        <p>
+                            Aerofile merged inspection photos, signatures, and compliance references into one repository,
+                            ready for regulators within minutes.
+                        </p>
+                        <a class="card__link" href="#demo">Inspect the vault →</a>
+                    </article>
+                    <article class="testimonial" data-animate>
+                        <blockquote>
+                            “Aerotrofix is the bridge between what the FAA expects and what our crews can deliver—no more
+                            improvising with spreadsheets.”
+                        </blockquote>
+                        <cite>Airport Operations Director, US Major Hub</cite>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Let's Build Safer, Smarter Airports Together</h2>
-                <p class="section-subtitle">Ready to revolutionize your aviation operations? Get in touch for a personalized demo.</p>
-            </div>
-            <div class="contact-content">
-                <div id="demo" class="contact-form">
-                    <form class="form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" class="form-input" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-input" placeholder="Your Email" required>
-                            </div>
+        <section class="section section--dark section--overlay" id="contact">
+            <div class="container grid grid--cta">
+                <div class="section__header" data-animate>
+                    <span class="section__eyebrow">Ready to brief</span>
+                    <h2>Book a 30-minute readiness session.</h2>
+                    <p>
+                        We're a focused aviation ops startup actively building alongside our first airport partners.
+                        Bring your maintenance profile and we'll tailor a live walkthrough around the closures,
+                        inspections, and documentation you need to control.
+                    </p>
+                    <div class="cta__meta">
+                        <div>
+                            <span class="stats__value stats__value--small">Private beta</span>
+                            <span class="stats__label">Founding airport teams onboarding now</span>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-input" placeholder="Organization" required>
+                        <div>
+                            <span class="stats__value stats__value--small">Hands-on demo</span>
+                            <span class="stats__label">Every conversation includes a guided prototype briefing</span>
                         </div>
-                        <div class="form-group">
-                            <textarea class="form-input form-textarea" placeholder="Tell us about your aviation technology needs..." rows="5" required></textarea>
-                        </div>
-                        <div class="form-buttons">
-                            <button type="submit" class="btn btn-primary btn-large">Schedule a Demo</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+                <form class="form" id="demo" data-animate data-endpoint="/api/demo-request">
+                    <label class="form__label" for="name">Name</label>
+                    <input id="name" class="form__input" type="text" name="name" placeholder="Jordan Rivers" required />
 
-    <!-- Footer -->
+                    <label class="form__label" for="email">Work email</label>
+                    <input id="email" class="form__input" type="email" name="email" placeholder="ops@airport.com" required />
+
+                    <label class="form__label" for="org">Organization</label>
+                    <input id="org" class="form__input" type="text" name="organization" placeholder="Skyway International" required />
+
+                    <label class="form__label" for="message">Mission-critical details</label>
+                    <textarea id="message" class="form__input form__textarea" name="message" rows="4" placeholder="Tell us about your next closure or inspection window…"></textarea>
+
+                    <button class="btn btn--primary" type="submit">Send briefing request</button>
+                    <p class="form__status" data-form-status role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="Aviation Technology Company Logo - Elegance and Trust.png" alt="Aerotrofix Logo" class="footer-logo-img">
-                        <span class="footer-company-name">Aerotrofix LLC</span>
-                    </div>
-                    <p class="footer-description">Bridging Aviation Expertise with IT Innovation.</p>
+        <div class="container footer__grid">
+            <div>
+                <div class="footer__brand">
+                    <img src="newlogo.PNG" alt="Aerotrofix logo" />
+                    <span>Aerotrofix LLC</span>
                 </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Our Solutions</h4>
-                    <ul class="footer-links">
-                        <li><a href="#demo">Request Demo</a></li>
-                        <li><a href="#about">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#solutions">Solutions</a></li>
-                        <li><a href="#about">Who We Are</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Experience</h4>
-                    <div class="footer-experience">
-                        <p><i class="fas fa-plane"></i> 30 Years Aviation Operations</p>
-                        <p><i class="fas fa-code"></i> 25 Years IT Development</p>
-                        <p><i class="fas fa-shield-alt"></i> FAA/ICAO Compliant</p>
-                    </div>
-                </div>
+                <p>
+                    Aviation technologists focused on resilient closures, compliance-ready documentation, and teams who
+                    can execute with confidence.
+                </p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Aerotrofix LLC | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a> | <a href="disclaimer.html">Disclaimer</a></p>
+            <div>
+                <h3>Explore</h3>
+                <a href="#solutions">Solutions</a>
+                <a href="#outcomes">Outcomes</a>
+                <a href="#insights">Insights</a>
             </div>
+            <div>
+                <h3>Resources</h3>
+                <a href="privacy-policy.html">Privacy policy</a>
+                <a href="terms-of-service.html">Terms of service</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <a href="#contact">Request a briefing</a>
+                <span>Operations centre • North America</span>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© <span data-year></span> Aerotrofix LLC. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
